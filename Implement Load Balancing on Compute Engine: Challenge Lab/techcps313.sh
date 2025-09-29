@@ -3,10 +3,10 @@
 
 gcloud auth list
 
-export ZONE=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
-export REGION=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])")
+export ZONE="us-west1-b"
+export REGION="us-west1"
 
-export PROJECT_ID=$(gcloud config get-value project)
+export PROJECT_ID="qwiklabs-gcp-04-ea613c413211"
 
 gcloud config set compute/zone "$ZONE"
 gcloud config set compute/region "$REGION"
